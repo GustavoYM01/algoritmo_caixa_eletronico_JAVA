@@ -3,6 +3,8 @@ package application;
 import java.util.Scanner;
 
 public class Program {
+	
+	// Autor do algoritmo: Gustavo Yamashita Matimoto
 
 	public static void main(String[] args) {
 
@@ -16,7 +18,7 @@ public class Program {
 		double deposit = 0.0;
 		double withdraw = 0.0;
 
-		System.out.printf("Bem-vindo(a) ao caixa eletrÙnico feito em JAVA%n%n");
+		System.out.printf("Bem-vindo(a) ao caixa eletr√¥nico feito em JAVA%n%n");
 
 		System.out.print("Informe um CPF: ");
 		String randomCpf = sc.nextLine();
@@ -25,33 +27,33 @@ public class Program {
 			System.out.print("Informe a senha: ");
 			randomPassword = sc.nextLine();
 			if (randomPassword.equals(registeredPassword)) {
-				System.out.println("Escolha uma das opÁıes: " + 
-						"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+				System.out.println("Escolha uma das op√ß√µes: " + 
+						"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 				menuChoice = sc.nextInt();
 				sc.nextLine();
 					if(menuChoice == 1) {
-						System.out.printf("Saldo disponÌvel: %.2f%n", balance);
-						System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+						System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
+						System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 						resp = sc.next().charAt(resp);
 						if(resp == 's' || resp == 'S') {
 							do {
-								System.out.println("Escolha uma das opÁıes: " + 
-										"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+								System.out.println("Escolha uma das op√ß√µes: " + 
+										"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 								menuChoice = sc.nextInt();
 								sc.nextLine();
 								
 								if(menuChoice < 0 || menuChoice > 3) {
-									System.out.printf("OpÁ„o inv·lida%n");
+									System.out.printf("Op√ß√£o inv√°lida%n");
 								}
 								else if(menuChoice == 0) {
 									System.out.print("Volte sempre.");
 									System.exit(0);
 								}
 								else if(menuChoice == 1) {
-									System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+									System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 								}
 								else if(menuChoice == 2) {
-									System.out.print("Informe um valor para depÛsito: ");
+									System.out.print("Informe um valor para dep√≥sito: ");
 									deposit = sc.nextDouble();
 									sc.nextLine();
 									balance += deposit;
@@ -65,7 +67,7 @@ public class Program {
 									System.out.printf("Saldo atualizado: %.2f%n", balance);
 								}
 								resp = 0;
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								
 							}while(resp == 's' || resp == 'S');
@@ -78,32 +80,32 @@ public class Program {
 						}
 					}
 					else if(menuChoice == 2) {
-						System.out.print("Informe um valor para depÛsito: ");
+						System.out.print("Informe um valor para dep√≥sito: ");
 						deposit = sc.nextDouble();
 						sc.nextLine();
 						balance += deposit;
 						System.out.printf("Saldo atualizado: %.2f%n", balance);
-						System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+						System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 						resp = sc.next().charAt(resp);
 						if(resp == 's' || resp == 'S') {
 							do {
-								System.out.println("Escolha uma das opÁıes: " + 
-										"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+								System.out.println("Escolha uma das op√ß√µes: " + 
+										"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 								menuChoice = sc.nextInt();
 								sc.nextLine();
 								
 								if(menuChoice < 0 || menuChoice > 3) {
-									System.out.printf("OpÁ„o inv·lida%n");
+									System.out.printf("Op√ß√£o inv√°lida%n");
 								}
 								else if(menuChoice == 0) {
 									System.out.print("Volte sempre.");
 									System.exit(0);
 								}
 								else if(menuChoice == 1) {
-									System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+									System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 								}
 								else if(menuChoice == 2) {
-									System.out.print("Informe um valor para depÛsito: ");
+									System.out.print("Informe um valor para dep√≥sito: ");
 									deposit = sc.nextDouble();
 									sc.nextLine();
 									balance += deposit;
@@ -117,7 +119,7 @@ public class Program {
 									System.out.printf("Saldo atualizado: %.2f%n", balance);
 								}
 								resp = 0;
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								
 							}while(resp == 's' || resp == 'S');
@@ -135,27 +137,27 @@ public class Program {
 						sc.nextLine();
 						balance -= withdraw;
 						System.out.printf("Saldo atualizado: %.2f%n", balance);
-						System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+						System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 						resp = sc.next().charAt(resp);
 						if(resp == 's' || resp == 'S') {
 							do {
-								System.out.println("Escolha uma das opÁıes: " + 
-										"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+								System.out.println("Escolha uma das op√ß√µes: " + 
+										"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 								menuChoice = sc.nextInt();
 								sc.nextLine();
 								
 								if(menuChoice < 0 || menuChoice > 3) {
-									System.out.printf("OpÁ„o inv·lida%n");
+									System.out.printf("Op√ß√£o inv√°lida%n");
 								}
 								else if(menuChoice == 0) {
 									System.out.print("Volte sempre.");
 									System.exit(0);
 								}
 								else if(menuChoice == 1) {
-									System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+									System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 								}
 								else if(menuChoice == 2) {
-									System.out.print("Informe um valor para depÛsito: ");
+									System.out.print("Informe um valor para dep√≥sito: ");
 									deposit = sc.nextDouble();
 									sc.nextLine();
 									balance += deposit;
@@ -169,7 +171,7 @@ public class Program {
 									System.out.printf("Saldo atualizado: %.2f%n", balance);
 								}
 								resp = 0;
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								
 							}while(resp == 's' || resp == 'S');
@@ -188,36 +190,36 @@ public class Program {
 			} else {
 				System.out.printf("Senha incorreta, 2 tentativas para acessar a conta%n");
 				for (int i = 1; i <= 2; i++) {
-					System.out.print(i + "∞ tentativa: ");
+					System.out.print(i + "¬∞ tentativa: ");
 					randomPassword = sc.nextLine();
 					if (randomPassword.equals(registeredPassword)) {
-						System.out.println("Escolha uma das opÁıes: " + 
-								"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+						System.out.println("Escolha uma das op√ß√µes: " + 
+								"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 						menuChoice = sc.nextInt();
 						sc.nextLine();
 							if(menuChoice == 1) {
-								System.out.printf("Saldo disponÌvel: %.2f%n", balance);
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								if(resp == 's' || resp == 'S') {
 									do {
-										System.out.println("Escolha uma das opÁıes: " + 
-												"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+										System.out.println("Escolha uma das op√ß√µes: " + 
+												"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 										menuChoice = sc.nextInt();
 										sc.nextLine();
 										
 										if(menuChoice < 0 || menuChoice > 3) {
-											System.out.printf("OpÁ„o inv·lida%n");
+											System.out.printf("Op√ß√£o inv√°lida%n");
 										}
 										else if(menuChoice == 0) {
 											System.out.print("Volte sempre.");
 											System.exit(0);
 										}
 										else if(menuChoice == 1) {
-											System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+											System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 										}
 										else if(menuChoice == 2) {
-											System.out.print("Informe um valor para depÛsito: ");
+											System.out.print("Informe um valor para dep√≥sito: ");
 											deposit = sc.nextDouble();
 											sc.nextLine();
 											balance += deposit;
@@ -231,7 +233,7 @@ public class Program {
 											System.out.printf("Saldo atualizado: %.2f%n", balance);
 										}
 										resp = 0;
-										System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+										System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 										resp = sc.next().charAt(resp);
 										
 									}while(resp == 's' || resp == 'S');
@@ -244,32 +246,32 @@ public class Program {
 								}
 							}
 							else if(menuChoice == 2) {
-								System.out.print("Informe um valor para depÛsito: ");
+								System.out.print("Informe um valor para dep√≥sito: ");
 								deposit = sc.nextDouble();
 								sc.nextLine();
 								balance += deposit;
 								System.out.printf("Saldo atualizado: %.2f%n", balance);
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								if(resp == 's' || resp == 'S') {
 									do {
-										System.out.println("Escolha uma das opÁıes: " + 
-												"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+										System.out.println("Escolha uma das op√ß√µes: " + 
+												"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 										menuChoice = sc.nextInt();
 										sc.nextLine();
 										
 										if(menuChoice < 0 || menuChoice > 3) {
-											System.out.printf("OpÁ„o inv·lida%n");
+											System.out.printf("Op√ß√£o inv√°lida%n");
 										}
 										else if(menuChoice == 0) {
 											System.out.print("Volte sempre.");
 											System.exit(0);
 										}
 										else if(menuChoice == 1) {
-											System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+											System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 										}
 										else if(menuChoice == 2) {
-											System.out.print("Informe um valor para depÛsito: ");
+											System.out.print("Informe um valor para dep√≥sito: ");
 											deposit = sc.nextDouble();
 											sc.nextLine();
 											balance += deposit;
@@ -283,7 +285,7 @@ public class Program {
 											System.out.printf("Saldo atualizado: %.2f%n", balance);
 										}
 										resp = 0;
-										System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+										System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 										resp = sc.next().charAt(resp);
 										
 									}while(resp == 's' || resp == 'S');
@@ -301,27 +303,27 @@ public class Program {
 								sc.nextLine();
 								balance -= withdraw;
 								System.out.printf("Saldo atualizado: %.2f%n", balance);
-								System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+								System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 								resp = sc.next().charAt(resp);
 								if(resp == 's' || resp == 'S') {
 									do {
-										System.out.println("Escolha uma das opÁıes: " + 
-												"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+										System.out.println("Escolha uma das op√ß√µes: " + 
+												"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 										menuChoice = sc.nextInt();
 										sc.nextLine();
 										
 										if(menuChoice < 0 || menuChoice > 3) {
-											System.out.printf("OpÁ„o inv·lida%n");
+											System.out.printf("Op√ß√£o inv√°lida%n");
 										}
 										else if(menuChoice == 0) {
 											System.out.print("Volte sempre.");
 											System.exit(0);
 										}
 										else if(menuChoice == 1) {
-											System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+											System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 										}
 										else if(menuChoice == 2) {
-											System.out.print("Informe um valor para depÛsito: ");
+											System.out.print("Informe um valor para dep√≥sito: ");
 											deposit = sc.nextDouble();
 											sc.nextLine();
 											balance += deposit;
@@ -335,7 +337,7 @@ public class Program {
 											System.out.printf("Saldo atualizado: %.2f%n", balance);
 										}
 										resp = 0;
-										System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+										System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 										resp = sc.next().charAt(resp);
 										
 									}while(resp == 's' || resp == 'S');
@@ -357,27 +359,27 @@ public class Program {
 				System.exit(0);
 			}
 			while (menuChoice < 0 || menuChoice > 3) {
-				System.out.print("OpÁ„o inv·lida, tentar novamente (s/n)? ");
+				System.out.print("Op√ß√£o inv√°lida, tentar novamente (s/n)? ");
 				resp = sc.next().charAt(resp);
 				if (resp == 's' || resp == 'S') {
 					do {
-						System.out.println("Escolha uma das opÁıes: " + 
-								"1 - Saldo | 2 - DepÛsito | 3 - Saque | 0 - Sair");
+						System.out.println("Escolha uma das op√ß√µes: " + 
+								"1 - Saldo | 2 - Dep√≥sito | 3 - Saque | 0 - Sair");
 						menuChoice = sc.nextInt();
 						sc.nextLine();
 						
 						if(menuChoice < 0 || menuChoice > 3) {
-							System.out.printf("OpÁ„o inv·lida%n");
+							System.out.printf("Op√ß√£o inv√°lida%n");
 						}
 						else if(menuChoice == 0) {
 							System.out.print("Volte sempre.");
 							System.exit(0);
 						}
 						else if(menuChoice == 1) {
-							System.out.printf("Saldo disponÌvel: %.2f%n", balance);
+							System.out.printf("Saldo dispon√≠vel: %.2f%n", balance);
 						}
 						else if(menuChoice == 2) {
-							System.out.print("Informe um valor para depÛsito: ");
+							System.out.print("Informe um valor para dep√≥sito: ");
 							deposit = sc.nextDouble();
 							sc.nextLine();
 							balance += deposit;
@@ -391,7 +393,7 @@ public class Program {
 							System.out.printf("Saldo atualizado: %.2f%n", balance);
 						}
 						resp = 0;
-						System.out.print("Deseja realizar uma nova operaÁ„o (s/n)? ");
+						System.out.print("Deseja realizar uma nova opera√ß√£o (s/n)? ");
 						resp = sc.next().charAt(resp);
 						
 					}while(resp == 's' || resp == 'S');
@@ -404,7 +406,7 @@ public class Program {
 			}
 		}
 		else {
-			System.out.print("CPF n„o encontrado");
+			System.out.print("CPF n√£o encontrado");
 			System.exit(0);
 		}
 		sc.close();
